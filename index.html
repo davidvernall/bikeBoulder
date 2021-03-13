@@ -41,7 +41,9 @@
             <div class="mx-auto text-center">
                 <h2 class="mx-auto text-uppercase">rideboulder</h2>
                 <h4 class="mx-auto my-4 mb-5">Where shall we ride today?</h4>
-                <a class="btn btn-dark js-scroll-trigger" href="#questions">Get Started</a>
+                <a class="btn btn-dark js-scroll-trigger" href="#questions" data-toggle="tooltip"
+                    data-placement="bottom" data-html="true" title="Or use the PYO RIDE in the top right corner">Get
+                    Started</a>
             </div>
         </div>
     </header>
@@ -54,112 +56,114 @@
         </div>
     </div>
 
-    <div id="answers">
-        <div class="container d-flex align-items-center py-5">
-            <form action="" class="mx-auto">ENTER CHOSEN FORM STYLE HERE</form>
+    <div id="answer">
+        <div class="container d-flex align-items-center">
+            <div class="mx-auto text-center">
+                <span class="">
+                    <a class="btn btn-dark my-4" href="#questions" role="button" data-toggle="modal" data-target="#questionModal">
+                        Lead me on a journey
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="questionModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Lets go!</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">How long do you have today?</label>
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                        <input type="radio" name="rideLength" id="allDay" value="allDay" checked> I have
+                                        all day
+                                    </label>
+                                    <label class="btn btn-light">
+                                        <input type="radio" name="rideLength" id="halfDay" value="halfDay"> At least an
+                                        afternoon
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input type="radio" name="rideLength" id="twoHrs" value="twoHrs">
+                                        A couple of Hours
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group row mx-auto">
+                                <button type="button" onclick="ride()" class="btn btn-primary">Ride!</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="message"></div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- PYO RIDES-->
-    <section class="contact-section bg-black">
+    <section class="contact-section bg-black" id="pyoRide">
         <div class="container">
-            <div class="row row-cols-2 row-cols-md-3 g-4">
+            <div class="row row-cols-2 row-cols-md-3 g-4 py-4">
                 <div class="col">
                     <div class="card">
-                        <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top" alt="bouldercanyonphoto">
+                        <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top"
+                            alt="bouldercanyonphoto">
                         <div class="card-body">
                             <h5 class="card-title">Boulder Canyon</h5>
                             <p class="card-text">This is a long ride with huge elevation gains</p>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">Last updated 3 mins ago</small>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="img/8A06ABCF-C54E-443F-978D-CA67BCF776BD_1_105_c.jpeg" class="card-img-top" alt="bouldercanyonphoto">
+                        <img src="img/8A06ABCF-C54E-443F-978D-CA67BCF776BD_1_105_c.jpeg" class="card-img-top"
+                            alt="bouldercanyonphoto">
                         <div class="card-body">
                             <h5 class="card-title">Boulder - Lyons</h5>
                             <p class="card-text">This is a long ride but lots of long flats</p>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">Last updated 3 mins ago</small>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="img/27C5A8AF-C49D-4AF4-95ED-B1023BA5A445_1_105_c.jpeg" class="card-img-top" alt="bouldercanyonphoto">
+                        <img src="img/27C5A8AF-C49D-4AF4-95ED-B1023BA5A445_1_105_c.jpeg" class="card-img-top"
+                            alt="bouldercanyonphoto">
                         <div class="card-body">
                             <h5 class="card-title">Boulder Resevoir</h5>
                             <p class="card-text">This is a long ride with huge elevation gains</p>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">Last updated 3 mins ago</small>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top" alt="bouldercanyonphoto">
+                        <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top"
+                            alt="bouldercanyonphoto">
                         <div class="card-body">
                             <h5 class="card-title">Boulder Canyon</h5>
                             <p class="card-text">This is a long ride with huge elevation gains</p>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">Last updated 3 mins ago</small>
-                          </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top" alt="bouldercanyonphoto">
-                        <div class="card-body">
-                            <h5 class="card-title">Boulder Canyon</h5>
-                            <p class="card-text">This is a long ride with huge elevation gains</p>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                          </div>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top" alt="bouldercanyonphoto">
-                        <div class="card-body">
-                            <h5 class="card-title">Boulder Canyon</h5>
-                            <p class="card-text">This is a long ride with huge elevation gains</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                          </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top" alt="bouldercanyonphoto">
-                        <div class="card-body">
-                            <h5 class="card-title">Boulder Canyon</h5>
-                            <p class="card-text">This is a long ride with huge elevation gains</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                          </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top" alt="bouldercanyonphoto">
-                        <div class="card-body">
-                            <h5 class="card-title">Boulder Canyon</h5>
-                            <p class="card-text">This is a long ride with huge elevation gains</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                          </div>
-                    </div>
-                </div>
+            </div>
+        </div>
     </section>
 
     <!-- footer  -->

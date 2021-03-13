@@ -49,3 +49,17 @@
 //     // Collapse the navbar when page is scrolled
 //     $(window).scroll(navbarCollapse);
 // })(jQuery); // End of use strict
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
+function ride() {
+    const message = document.querySelector("#message");
+    const checkedInput = document.querySelector("input:checked");
+    if (checkedInput) {
+      message.textContent = `You want to ride ${checkedInput.value}.`;
+    } else {
+      message.textContent = "Unknown order.";
+    }
+  }

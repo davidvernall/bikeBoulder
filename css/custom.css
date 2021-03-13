@@ -17,3 +17,7 @@
     height: 40vw;
     object-fit: cover;
 }
+
+.mx-2 {
+    color: black;
+}
