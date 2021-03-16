@@ -51,58 +51,25 @@
     <div id="questions">
         <div class="container d-flex align-items-center">
             <div class="mx-auto text-center">
-                <h4 class="mx-auto">Answer a few questions and let us suggest a few rides for you</h4>
+                <h4 class="mx-auto">Search for a specific ride below</h4>
             </div>
         </div>
     </div>
 
-    <div id="answer">
-        <div class="container d-flex align-items-center">
-            <div class="mx-auto text-center">
-                <span class="">
-                    <a class="btn btn-dark my-4" href="#questions" role="button" data-toggle="modal"
-                        data-target="#questionModal">
-                        Lead me on a journey
-                    </a>
-                </span>
-            </div>
-        </div>
-    </div>
 
-    <div id="questionModal" class="modal fade" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Lets go!</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <form>
-                            <div class="form-group">
-                                <select class="form-select" aria-label="Ride length">
-                                    <option selected>How long do you want to Ride?</option>
-                                    <option value="couple">A couple of Hours</option>
-                                    <option value="half">Half a day</option>
-                                    <option value="full">All day!</option>
-                                </select>
-                            </div>
-                    </div>
-                    <div class="form-group row mx-auto">
-                        <button type="button" onclick="ride()" class="btn btn-primary">Ride!</button>
-                    </div>
-                    </form>
-                </div>
-                <div id="message"></div>
-            </div>
-        </div>
-    </div>
-    </div>
+
+
 
     <!-- PYO RIDES-->
     <section class="contact-section bg-black" id="pyoRide">
         <div class="container">
-            <div class="row row-cols-2 row-cols-md-3 g-4 py-4">
+            <div class="row">
+                <div class="col-sm-12 mb-3">
+                    <input type="text" id="rideFilter" class="form-control" onkeyup="rideFunction()"
+                        placeholder="Search for a ride...">
+                </div>
+            </div>
+            <div class="row row-cols-2 row-cols-md-3 g-4 py-4" id="rideItems">
                 <div class="col">
                     <div class="card">
                         <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top"

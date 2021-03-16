@@ -76,3 +76,20 @@ weather.find({search: 'Boulder, CO', degreeType: 'F'}, function(err, result) {
 
   console.log(JSON.stringify(result, null, 2));
 });
+
+// Search bar
+function rideFunction() {
+    var input, filter, cards, cardContainer, h5, title, i;
+    input = document.getElementById("rideFilter");
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("rideItems");
+    cards = cardContainer.getElementsByClassName("card");
+    for (i = 0; i < cards.length; i++) {
+        title = cards[i].querySelector(".card-body h5.card-title");
+        if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
