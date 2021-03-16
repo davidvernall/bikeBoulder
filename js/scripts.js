@@ -58,8 +58,21 @@ function ride() {
     const message = document.querySelector("#message");
     const checkedInput = document.querySelector("input:checked");
     if (checkedInput) {
-      message.textContent = `You want to ride ${checkedInput.value}.`;
+        message.textContent = `You want to ride ${checkedInput.value}.`;
     } else {
-      message.textContent = "Unknown order.";
+        message.textContent = "Unknown order.";
     }
-  }
+}
+
+// WEATHER APP
+var weather = require('weather-js');
+
+// Options:
+// search:     location name or zipcode
+// degreeType: F or C
+
+weather.find({search: 'Boulder, CO', degreeType: 'F'}, function(err, result) {
+  if(err) console.log(err);
+
+  console.log(JSON.stringify(result, null, 2));
+});

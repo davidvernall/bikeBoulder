@@ -60,7 +60,8 @@
         <div class="container d-flex align-items-center">
             <div class="mx-auto text-center">
                 <span class="">
-                    <a class="btn btn-dark my-4" href="#questions" role="button" data-toggle="modal" data-target="#questionModal">
+                    <a class="btn btn-dark my-4" href="#questions" role="button" data-toggle="modal"
+                        data-target="#questionModal">
                         Lead me on a journey
                     </a>
                 </span>
@@ -78,32 +79,24 @@
                 <div class="modal-body">
                     <div class="container-fluid">
                         <form>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">How long do you have today?</label>
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary active">
-                                        <input type="radio" name="rideLength" id="allDay" value="allDay" checked> I have
-                                        all day
-                                    </label>
-                                    <label class="btn btn-light">
-                                        <input type="radio" name="rideLength" id="halfDay" value="halfDay"> At least an
-                                        afternoon
-                                    </label>
-                                    <label class="btn btn-secondary">
-                                        <input type="radio" name="rideLength" id="twoHrs" value="twoHrs">
-                                        A couple of Hours
-                                    </label>
-                                </div>
+                            <div class="form-group">
+                                <select class="form-select" aria-label="Ride length">
+                                    <option selected>How long do you want to Ride?</option>
+                                    <option value="couple">A couple of Hours</option>
+                                    <option value="half">Half a day</option>
+                                    <option value="full">All day!</option>
+                                </select>
                             </div>
-                            <div class="form-group row mx-auto">
-                                <button type="button" onclick="ride()" class="btn btn-primary">Ride!</button>
-                            </div>
-                        </form>
                     </div>
-                    <div id="message"></div>
+                    <div class="form-group row mx-auto">
+                        <button type="button" onclick="ride()" class="btn btn-primary">Ride!</button>
+                    </div>
+                    </form>
                 </div>
+                <div id="message"></div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- PYO RIDES-->
