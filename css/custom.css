@@ -45,3 +45,14 @@
 #pyoRide {
     padding-bottom: 100px;
 }
+
+.masthead h2 {
+    color: white;
+}
+.masthead h4 {
+    color: #e5e5e5;
+}
+
+#search h4 {
+    color: #293241;
+}
