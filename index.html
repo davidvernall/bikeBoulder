@@ -19,6 +19,7 @@
 </head>
 
 <body id="page-top">
+
     <!-- Navbar-->
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top" id="mainNav">
         <div class="container">
@@ -30,45 +31,40 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto navbar-dark">
-                    <li class="nav-item align-text-right"><a class="nav-link" href="#pyoRide">PYO RIDE</a></li>
+                    <li class="nav-item align-text-right"><a class="nav-link" href="#search">PYO RIDE</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Masthead-->
     <header class="masthead">
         <div class="container d-flex align-items-center">
             <div class="mx-auto text-center">
                 <h2 class="mx-auto text-uppercase">rideboulder</h2>
                 <h4 class="mx-auto my-4 mb-5">Where shall we ride today?</h4>
-                <a class="btn btn-dark js-scroll-trigger" href="#questions" data-toggle="tooltip"
-                    data-placement="bottom" data-html="true" title="Or use the PYO RIDE in the top right corner">Get
+                <a class="btn btn-dark js-scroll-trigger" href="#search" data-toggle="tooltip" data-placement="bottom"
+                    data-html="true" title="Or use the PYO RIDE in the top right corner">Get
                     Started</a>
             </div>
         </div>
     </header>
-
-    <div id="questions">
+    
+    <!-- search bar-->
+    <div id="search">
         <div class="container d-flex align-items-center">
             <div class="mx-auto text-center">
                 <h4 class="mx-auto">Search for a specific ride below</h4>
+                <input type="text" id="rideFilter" class="form-control" onkeyup="rideFunction()"
+                    placeholder="Search for a ride...">
             </div>
         </div>
     </div>
 
 
-
-
-
-    <!-- PYO RIDES-->
+    <!-- RIDES-->
     <section class="contact-section bg-black" id="pyoRide">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12 mb-3">
-                    <input type="text" id="rideFilter" class="form-control" onkeyup="rideFunction()"
-                        placeholder="Search for a ride...">
-                </div>
-            </div>
             <div class="row row-cols-2 row-cols-md-3 g-4 py-4" id="rideItems">
                 <div class="col">
                     <div class="card">
@@ -77,48 +73,79 @@
                         <div class="card-body">
                             <h5 class="card-title">Boulder Canyon</h5>
                             <p class="card-text">This is a long ride with huge elevation gains</p>
+                            <a href="#" class="stretched-link"></a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <small class="text-muted">Last ride 13 mins ago</small>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
                         <img src="img/8A06ABCF-C54E-443F-978D-CA67BCF776BD_1_105_c.jpeg" class="card-img-top"
-                            alt="bouldercanyonphoto">
+                            alt="boulderLyonsPhoto">
                         <div class="card-body">
                             <h5 class="card-title">Boulder - Lyons</h5>
-                            <p class="card-text">This is a long ride but lots of long flats</p>
+                            <p class="card-text">This is a long ride with plenty of long flats</p>
+                            <a href="#" class="stretched-link"></a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <small class="text-muted">Last ride 58 mins ago</small>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
                         <img src="img/27C5A8AF-C49D-4AF4-95ED-B1023BA5A445_1_105_c.jpeg" class="card-img-top"
-                            alt="bouldercanyonphoto">
+                            alt="boulderResPhoto">
                         <div class="card-body">
                             <h5 class="card-title">Boulder Resevoir</h5>
-                            <p class="card-text">This is a long ride with huge elevation gains</p>
+                            <p class="card-text">This is a medium ride with little elevation</p>
+                            <a href="#" class="stretched-link"></a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <small class="text-muted">Last ride 2 mins ago</small>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="card">
-                        <img src="img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg" class="card-img-top"
-                            alt="bouldercanyonphoto">
+                        <img src="img/collin-armstrong-M00Wcee-oRw-unsplash.jpg" class="card-img-top" alt="ncarPhoto">
                         <div class="card-body">
-                            <h5 class="card-title">Boulder Canyon</h5>
-                            <p class="card-text">This is a long ride with huge elevation gains</p>
+                            <h5 class="card-title">NCAR</h5>
+                            <p class="card-text">This is a quick ride with steep elevation gains</p>
+                            <a href="#" class="stretched-link"></a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
+                            <small class="text-muted">Last ride 36 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/malachi-brooks-TmOnZVOqrAc-unsplash.jpg" class="card-img-top"
+                            alt="lefthandcanyonphoto">
+                        <div class="card-body">
+                            <h5 class="card-title">Left Hand Canyon</h5>
+                            <p class="card-text">This is a long, sustained mountain climb</p>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last ride 10 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/781C9862-E1A0-4982-8F69-603C5E5A4066_1_105_c.jpeg" class="card-img-top"
+                            alt="leehillphoto">
+                        <div class="card-body">
+                            <h5 class="card-title">Lee Hill Loop</h5>
+                            <p class="card-text">Two hour ride with steep up and downs</p>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last ride 42 mins ago</small>
                         </div>
                     </div>
                 </div>
