@@ -1,51 +1,41 @@
-// (function ($) {
-//     "use strict"; // Start of use strict
 
-//     // Smooth scrolling using jQuery easing
-//     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
-//         if (
-//             location.pathname.replace(/^\//, "") ==
-//                 this.pathname.replace(/^\//, "") &&
-//             location.hostname == this.hostname
-//         ) {
-//             var target = $(this.hash);
-//             target = target.length
-//                 ? target
-//                 : $("[name=" + this.hash.slice(1) + "]");
-//             if (target.length) {
-//                 $("html, body").animate(
-//                     {
-//                         scrollTop: target.offset().top - 70,
-//                     },
-//                     1000,
-//                     "easeInOutExpo"
-//                 );
-//                 return false;
-//             }
-//         }
-//     });
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
 
-//     // Closes responsive menu when a scroll trigger link is clicked
-//     $(".js-scroll-trigger").click(function () {
-//         $(".navbar-collapse").collapse("hide");
-//     });
+function ride() {
+    const message = document.querySelector("#message");
+    const checkedInput = document.querySelector("input:checked");
+    if (checkedInput) {
+        message.textContent = `You want to ride ${checkedInput.value}.`;
+    } else {
+        message.textContent = "Unknown order.";
+    }
+}
 
-//     // Activate scrollspy to add active class to navbar items on scroll
-//     $("body").scrollspy({
-//         target: "#mainNav",
-//         offset: 100,
-//     });
 
-//     // Collapse Navbar
-//     var navbarCollapse = function () {
-//         if ($("#mainNav").offset().top > 100) {
-//             $("#mainNav").addClass("navbar-shrink");
-//         } else {
-//             $("#mainNav").removeClass("navbar-shrink");
-//         }
-//     };
-//     // Collapse now if page is not at top
-//     navbarCollapse();
-//     // Collapse the navbar when page is scrolled
-//     $(window).scroll(navbarCollapse);
-// })(jQuery); // End of use strict
+// Search bar
+function rideFunction() {
+    var input, filter, cards, cardContainer, title, i;
+    input = document.getElementById("rideFilter");
+    filter = input.value.toUpperCase();
+    cardContainer = document.getElementById("rideItems");
+    cards = cardContainer.getElementsByClassName("card");
+    for (i = 0; i < cards.length; i++) {
+        title = cards[i].querySelector(".card-body h5.card-title");
+        if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+            cards[i].style.display = "";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+
+// Card shadow effects
+$( ".card" ).hover(
+    function() {
+      $(this).addClass('shadow').css('cursor', 'pointer'); 
+    }, function() {
+      $(this).removeClass('shadow');
+    }
+  );
