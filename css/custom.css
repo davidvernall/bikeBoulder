@@ -42,6 +42,20 @@
     background-size: cover;
 }
 
+.boulderCanyonHead {
+    position: relative;
+    width: 100%; 
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background-image:
+        url("/img/19DC36D8-CF84-4583-AE1A-0E2E46DC3B48_1_105_c.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
 #pyoRide {
     padding-bottom: 100px;
 }
@@ -55,4 +69,8 @@
 
 #search h4 {
     color: #293241;
+}
+
+.boulderCanyonHead h2 {
+    color: #e5e5e5;
 }
